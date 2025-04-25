@@ -1,0 +1,594 @@
+@media only screen and (max-width: 375px){
+    .login-box {
+        width: 80%;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    
+    .login-box h2 {
+        margin: 0 0 30px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #2f9e40;
+        margin-bottom: 5%;
+    }
+    
+    
+    .login-box .user-box input {
+        width: 100%;
+        padding: 5px 0;
+        font-size: 10px;
+        margin-bottom: 18px;
+    }
+    
+    
+    .login-box form button {
+        padding: 8px 15px;
+        font-size: 10px;
+        margin-top: 5px;
+        letter-spacing: 4px;
+    }
+    
+
+    
+    #tipo_calculo {
+        padding: 5px;
+        width: 100%;
+        margin: 10%;
+        font-size: 0.60rem;
+        font-weight: 100;
+        margin-left: 0;
+    }
+    
+    .ifrj-container {
+        margin-top: 1%;
+        height: 12vh;
+        margin-bottom: 5%;
+    }
+    
+    .ifrj {
+        width: 12vh;
+        height: auto;
+    }
+    
+    .autor {
+        opacity: 1;
+        font-size: 0.4rem;
+    }
+
+    .autor b{
+        font-weight: 800;
+        color: black;
+    }
+    
+    .tutorial {
+        font-size: 0.5rem;
+        opacity: 0.8;
+        letter-spacing: 1.5px;
+        padding: 10px;
+    }
+    
+    #customAlert {
+        top: 35%;
+        width: 80%;
+        padding: 10px;
+        font-size: 0.7rem;
+        border-radius: 5px;
+    }
+
+    .p-explicação{
+        text-align: justify;
+        font-size: 0.55rem;
+        margin-top: -1%;
+        padding: 20px;
+        font-weight: 400;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    b{
+        font-weight: 800;
+    }
+
+    #toggle-theme{
+        position: absolute;
+        top: 30%;
+        margin-left: 2px;
+        z-index: 1000;
+        border-radius: 2px; 
+        opacity: 0.4;
+        width: 1%;
+        height: 20%;
+        padding: 5px;
+        text-align: center;
+        font-size: 0rem;
+        color: rgb(0, 0, 0);
+        background: rgb(255, 255, 255);
+        border-color: rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 800;
+    }
+
+    .escolha {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .links {
+        text-align: center; /* Centraliza os links horizontalmente */
+    }
+    
+
+    .links a {
+        display: inline-block; /* Torna os links em linha um ao lado do outro */
+        margin: 0 0;
+        text-decoration: none;
+        font-size: 0.5rem;
+        margin-bottom: 2%;
+        width: 15%;
+        height: 10%;
+    }
+    
+    .semestre,
+    .anual {
+        display: inline-block; /* Torna os elementos com as classes em linha um ao lado do outro */
+        margin: 0 -200px; /* Adapte a margem conforme necessário */
+        text-decoration: none;
+        color: black;
+        padding: 5px;
+    }
+    
+    .semestre{
+
+        border-radius: 5px;
+        padding-left: 15px;
+        padding-right: 20px;
+ 
+    }
+    
+    .anual{
+
+        border-radius: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+ 
+    }
+
+}
+
+@media only screen and (min-width: 376px) and (max-width: 650px){
+    .login-box {
+        width: 80%;
+        padding: 25px;
+    }
+    
+    .login-box h2 {
+        margin: 0 0 30px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #2f9e40;
+    }
+    
+    
+    .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    
+    
+    .login-box form button {
+        padding: 10px 20px;
+        font-size: 15px;
+        margin-top: 10px;
+        letter-spacing: 4px;
+    }
+    
+
+    
+    #tipo_calculo {
+        padding: 7px;
+        width: 100%;
+        margin: 10%;
+        font-size: 1rem;
+        margin-left: 0;
+    }
+    
+    .ifrj-container {
+        margin-top: 0;
+        height: 13vh;
+        margin-bottom: 5%;
+    }
+    
+    .ifrj {
+        width: 13vh;
+        height: auto;
+    }
+    
+    .autor {
+        font-size: 0.5rem;
+    }
+    
+    .tutorial {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        margin-top: 1%;
+        letter-spacing: 2px;
+        padding: 20px;
+    }
+    
+    #customAlert {
+        top: 32%;
+        width: 80%;
+        padding: 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    .p-explicação{
+        text-align: justify;
+        font-size: 0.85rem;
+        padding: 15px;
+        padding-bottom: 40px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #toggle-theme{
+        position: absolute;
+        top: 33%;
+        margin-left: 2px;
+        z-index: 1000;
+        border-radius: 2px; 
+        opacity: 0.4;
+        width: 1%;
+        height: 20%;
+        padding: 5px;
+        text-align: center;
+        font-size: 0rem;
+        color: rgb(0, 0, 0);
+        background: rgb(255, 255, 255);
+        border-color: rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 800;
+    }
+
+    .links a {
+        display: inline-block; /* Torna os links em linha um ao lado do outro */
+        margin: 0 0;
+        text-decoration: none;
+        font-size: 0.7rem;
+        margin-bottom: 0;
+        width: 15%;
+        height: 10%;
+    }
+    
+    .semestre,
+    .anual {
+        display: inline-block; /* Torna os elementos com as classes em linha um ao lado do outro */
+        margin: 0 -200px; /* Adapte a margem conforme necessário */
+        text-decoration: none;
+        color: black;
+        padding: 5px;
+    }
+    
+    .semestre{
+
+        border-radius: 5px;
+        padding-left: 20px;
+        padding-right: 25px;
+ 
+    }
+    
+    .anual{
+
+        border-radius: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
+ 
+    }
+
+}
+
+@media only screen and (min-width: 651px) and (max-width: 1210px){
+    .login-box {
+        width: 70%;
+        padding: 35px;
+    }
+    
+    .login-box h2 {
+        margin: 0 0 30px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: #2f9e40;
+    }
+    
+    
+    .login-box .user-box input {
+        width: 100%;
+        padding: 15px 0;
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+    
+    
+    .login-box form button {
+        padding: 15px 25px;
+        font-size: 18px;
+        margin-top: 40px;
+        letter-spacing: 4px;
+    }
+    
+
+    
+    #tipo_calculo {
+        padding: 10px;
+        width: 100%;
+        margin: 10%;
+        font-size: 1.3rem;
+        margin-left: 0;
+    }
+    
+    .ifrj-container {
+        margin-top: 0;
+        height: 14vh;
+        margin-bottom: 5%;
+    }
+    
+    .ifrj {
+        width: 14vh;
+        height: auto;
+    }
+    
+    .autor {
+        font-size: 0.8rem;
+    }
+    
+    .tutorial {
+        font-size: 1.3rem;
+        opacity: 0.8;
+        margin-top: 1%;
+        letter-spacing: 2px;
+        padding: 60px;
+    }
+    
+    #customAlert {
+        top: 35%;
+        width: 80%;
+        padding: 23px;
+        font-size: 1.5rem;
+        border-radius: 5px;
+    }
+
+    .p-explicação{
+        text-align: justify;
+        font-size: 1.3rem;
+        padding: 25px;
+        padding-bottom: 60px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #toggle-theme{
+        position: absolute;
+        top: 30%;
+        margin-left: 5px;
+        z-index: 1000;
+        border-radius: 5px;
+        padding: 5px;
+        opacity: 0.5;
+        text-align: center;
+        width: 3vh;
+        height: 30%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        line-height: 25px;
+        font-weight: 800;
+        font-size: 1rem;
+        padding: 15px;
+        color: rgb(0, 0, 0);
+        background: rgb(255, 255, 255);
+        border-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .links a {
+        display: inline-block; /* Torna os links em linha um ao lado do outro */
+        margin: 0 0;
+        text-decoration: none;
+        margin: 1%;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        width: 15%;
+        height: 10%;
+    }
+    
+    .semestre,
+    .anual {
+        display: inline-block; /* Torna os elementos com as classes em linha um ao lado do outro */
+        margin: 0 -200px; /* Adapte a margem conforme necessário */
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+    
+    .semestre{
+
+        border-radius: 5px;
+        padding-left: 25px;
+        padding-right: 40px;
+ 
+    }
+    
+    .anual{
+
+        border-radius: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
+ 
+    }
+
+}
+
+@media only screen and (min-width: 1211px) and (max-width: 2800px){
+    .login-box {
+        width: 30%;
+        padding: 40px;
+    }
+    
+    .login-box h2 {
+        margin: 50px 0 30px;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #2f9e40;
+    }
+    
+    
+    .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    
+    
+    .login-box form button {
+        padding: 10px 20px;
+        font-size: 15px;
+        margin-top: 20px;
+        letter-spacing: 4px;
+    }
+    
+
+    
+    #tipo_calculo {
+        padding: 8px;
+        width: 100%;
+        margin: 10%;
+        font-size: 1rem;
+        margin-left: 0;
+    }
+    
+    .ifrj-container {
+        margin-top: 0;
+        height: 10vh;
+        margin-bottom: 5%;
+    }
+    
+    .ifrj {
+        width: 15vh;
+        height: auto;
+    }
+    
+    .autor {
+        font-size: 0.8rem;
+    }
+    
+    .tutorial {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        margin-top: 1%;
+        letter-spacing: 2px;
+        padding: 20px;
+    }
+    
+    #customAlert {
+        top: 30%;
+        width: 80%;
+        padding: 20px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+    }
+
+    #toggle-theme{
+        position: absolute;
+        top: 30%;
+        margin-left: 5px;
+        z-index: 1000;
+        border-radius: 5px;
+        padding: 5px;
+        opacity: 0.5;
+        text-align: center;
+        width: 3vh;
+        height: 33%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        line-height: 25px;
+        font-weight: 800;
+        font-size: 1rem;
+        padding: 15px;
+        color: rgb(0, 0, 0);
+        background: rgb(255, 255, 255);
+        border-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .p-explicação{
+        text-align: justify;
+        font-size: 1rem;
+        padding-left: 0;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        padding-right: 0;
+        padding-bottom: 40px;
+    }
+
+    .links{
+        margin-top: -2%;
+        margin-bottom: -2%;
+    }
+
+    .links a {
+        display: inline-block; /* Torna os links em linha um ao lado do outro */
+        margin: 0 5px; /* Adapte a margem conforme necessário */
+        text-decoration: none;
+        margin-top: 1%;
+        color: #2f9e40;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 0px;
+    }
+    
+    .semestre,
+    .anual {
+        display: inline-block; /* Torna os elementos com as classes em linha um ao lado do outro */
+        margin: 0px; /* Adapte a margem conforme necessário */
+        text-decoration: none;
+        border-radius: 0px;
+        color: black;
+        padding: 4px;
+        text-align: center;
+    }
+    
+    .semestre{
+        border: 1px solid #2f9e40;
+        border-radius: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        transition: transform 0.7s ease-in-out;
+    }
+    
+    .anual{
+        border: 1px solid #2f9e40;
+        border-radius: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+}
+

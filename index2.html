@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="responsive2.css">
+    <link rel="icon" href="icon.png">
+    <meta name="author" content="Aleph Silva Ramos">
+    <meta name="author" content="Alice Pereira de Jesus">
+    <meta name="description" content="Esse é um site feito exclusivamente para o ifrj, com a intenção de ajudar aos estudantes a calcular a sua média ou nota necessária em alguma matéria.">
+    <title>Calcular Notas - IFRJ</title>
+</head>
+<body>
+
+    <button id="toggle-theme">M<br>U<br>D<br>A<br>R<br><br>T<br>E<br>M<br>A</button> 
+
+    
+    <p class="tutorial">Informe apenas números de <b style="color: crimson;">0 a 10.</b></p>
+    
+    <div class="login-box">
+        <div class="ifrj-container">
+            <img id="normalimg" src="ifrj.jpg" alt="IFRJ Logo" class="ifrj">
+            <img id="darkimg" src="ifrj2.png" alt="IFRJ Logo" class="ifrj">
+        </div>
+        <h2>Calculadora IFRJ</h2>
+
+<div class="links">
+    <a class="semestre" href="index.html">Semestral</a>
+    <a style="background: #2f9e40;
+    color: #ffffff;" class="anual" href="index2.html">Anual</a></div>
+
+
+        <form action="/calcular" method="post">
+            <div class="user-box">
+                <select class="select" name="tipo_calculo" id="tipo_calculo" onchange="mostrarOpcoes()" required>
+                    <option value="" selected disabled>Selecione uma opção</option>
+                    <option value="media">Média bimestral (estilo 1)</option>
+                    <option value="media2">Média bimestral (estilo 2)</option>
+                    <option value="media_prova">Média necessária no 4º bimestre</option>
+                    <option value="media_final">Média Final</option>
+                    <option value="media_recuperacao">Nota necessária (recuperação)</option>
+                </select>
+            </div>
+
+
+
+    
+            <div class="opcoes_media opcoes" style="display: none;">
+
+                
+                <form action="/calcular_media" method="post" id="calcularMedia">
+                    <div class="user-box">
+                        <input type="number" name="v1" id="v1_media" required min="0" max="10" step="0.01" placeholder="Nota da 1º Avaliação ⱽ¹">
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name="v2_media" id="v2_media" required min="0" max="10" step="0.01" placeholder="Nota da 2º Avaliação ⱽ²">
+                    </div>
+                    <button id="calcularMediabimestre" type="button" onclick="calcularMediaaa()">Calcular</button>
+                    <p class="p-explicação">Cada professor aborda um estilo para calcular a média, essa opção é o estilo convencional, onde a <b>v1</b> tem valor de <b>0 a 10</b> e a <b>v2</b> tem valor de <b>0 a 10.</b></p>
+                </form>
+            </div>
+
+            <div id="customAlert"></div>
+
+            <div class="opcoes_media2 opcoes" style="display: none;">
+                <form action="/calcular_media2" method="post" id="calcularMedia2">
+                    <div class="user-box">
+                        <input type="number" name="v1" id="v1_media2" required min="0" max="10" step="0.01" placeholder="Nota da 1º Avaliação ⱽ¹">
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name="v2_media2" id="v2_media2" required min="0" max="10" step="0.01" placeholder="Nota da 2º Avaliação ⱽ²">
+                    </div>
+                    <button id="calcularMediabimestre2" type="button" onclick="calcularMediaaa2()">Calcular</button>
+                    <p class="p-explicação">Essa opção é o estilo distinto, onde o valor da sua média é basicamente a soma delas, como por exemplo "V1 = 3" e "V2 = 7" = média 10, aqui vai ser sempre a soma dos valores das avalições igual a <b>10</b>.</p>
+                </form>
+            </div>
+
+            <div id="customAlert"></div>
+
+
+    
+            <!-- Opções específicas para o estilo "media_prova" -->
+            <div class="opcoes_media_prova opcoes" style="display: none;">
+                <form action="/calcular_media_prova" method="post" id="calcularMediaprova">
+                    <div class="user-box">
+                        <input type="number" name="md1" id="md1_media_prova" required min="0" max="10" step="0.01" placeholder="Nota do 1º Bimestre ¹ᵇᵐ">
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name="md2" id="md2_media_prova" required min="0" max="10" step="0.01" placeholder="Nota do 2º Bimestre ²ᵇᵐ">
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name="md3" id="md3_media_prova" required min="0" max="10" step="0.01" placeholder="Nota do 3º Bimestre ³ᵇᵐ">
+                    </div>
+                    <button id="calcularMediaprova" type="button" onclick="calcularMediaProva()">Calcular</button>
+                    <p class="p-explicação">Busque alcançar a média requerida; estou confiante de que <b>você vai conseguir!</b></p>
+                </form>
+            </div>
+
+            <div id="customAlert"></div>
+
+            <div class="opcoes_media_prova2 opcoes" style="display: none;">
+                <form action="/calcular_media_prova2" method="post" id="calcularMediaprova2">
+                    <div class="user-box">
+                        <input type="number" name="md1" id="md1_media_prova2" required min="0" max="10" step="0.01" placeholder="Nota do 1º Bimestre ¹ᵇᵐ">
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name="md2_media_prova2" id="md2_media_prova2" required min="0" max="10" step="0.01" placeholder="Nota do 2º Bimestre ²ᵇᵐ">
+                    </div>
+                    <button id="calcularMediaprova2" type="button" onclick="calcularMediaProva2()">Calcular</button>
+                </form>
+            </div>
+
+            <div id="customAlert"></div>
+
+
+
+
+
+
+
+
+            <!-- Opções específicas para o estilo "media_final" -->
+            <div class="opcoes_media_final opcoes" style="display: none;">
+                <form action="/calcular_media_final" method="post" id="calcularmediafinal">
+                    <div class="user-box">
+                        <input type="number" name="md1" id="md1" required min="0" max="10" step="0.01" placeholder="Nota do 1º Bimestre ¹ᵇᵐ">
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name="md2" id="md2" required min="0" max="10" step="0.01" placeholder="Nota do 2º Bimestre ²ᵇᵐ"> 
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name="md3" id="md3" required min="0" max="10" step="0.01" placeholder="Nota do 3º Bimestre ³ᵇᵐ">
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name="md4" id="md4" required min="0" max="10" step="0.01" placeholder="Nota do 4º Bimestre ⁴ᵇᵐ"> 
+                    </div>
+                    <button id="calcularmediafinal" type="button" onclick="calcularMediaFinal()">Calcular</button>
+                    <p class="p-explicação">O resultado que obter, não será a sua média final <b>exata</b>, pois o SIGAA arredonda <b>para MAIS ou para MENOS</b>, então o valor informado é 95% aproximado do valor final.</p>
+                </form>
+
+            </div>
+
+            <div id="customAlert"></div>
+
+
+
+
+    
+            <!-- Opções específicas para o estilo "media_recuperacao" -->
+            <div class="opcoes_media_recuperacao opcoes" style="display: none;">
+                <form action="/calcular_media_recuperacao" method="post" id="calcularmediarecuperacao">
+                    <!-- Adicione opções específicas para a média recuperação aqui, se necessário -->
+                    <div class="user-box">
+                        <input type="number" name="mf" id="mf" required min="0" max="10" step="0.01" placeholder="Média Final ᴳ">
+                    </div>
+                    <button id="calcularmediarecuperacao" type="button" onclick="calcularMediaRecuperacao()">Calcular</button>
+                    <p class="p-explicação">Caso o valor que obter, seja muito alto, não desista, você <b>vai conseguir</b>.</p>
+                </form>
+
+            </div>
+
+            <div id="customAlert"></div>
+    
+
+
+        </form>
+        <p class="autor">Produzido por: <b>Aleph Ramos e Alice Pereira</b></p>
+    </div>
+
+<div>
+    
+</div>
+
+<script>
+    function mostrarOpcoes() {
+        var tipoCalculo = document.getElementById('tipo_calculo').value;
+        var opcoes = document.querySelectorAll('.opcoes');
+
+        opcoes.forEach(function(opcao) {
+            opcao.style.display = 'none';
+        });
+
+        var opcoesEspecificas = document.querySelector('.opcoes_' + tipoCalculo);
+
+        if (opcoesEspecificas) {
+            opcoesEspecificas.style.display = 'block';
+        }
+    }
+
+
+
+
+    function calcularMediaaa() {
+        var v1 = parseFloat(document.getElementById("v1_media").value);
+        var v2 = parseFloat(document.getElementById("v2_media").value);
+
+        if (isNaN(v1) || isNaN(v2)) {
+            showAlert("Digite os valores corretos");
+            return;
+        }
+
+        var resultado = (v1 + v2) / 2;
+        showAlert("Você obteve uma média de <strong>" + resultado + " pontos</strong>.");
+    }
+
+    function showAlert(message) {
+        var customAlert = document.getElementById("customAlert");
+        customAlert.innerHTML = message;
+        customAlert.style.display = "block";
+
+        setTimeout(function () {
+            customAlert.style.display = "none";
+        }, 5000); // Oculta o alert após 3 segundos (pode ajustar conforme necessário)
+    }
+
+
+    function calcularMediaaa2() {
+        var v1 = parseFloat(document.getElementById("v1_media2").value);
+        var v2 = parseFloat(document.getElementById("v2_media2").value);
+
+        if (isNaN(v1) || isNaN(v2)) {
+            showAlert("Digite os valores corretos");
+            return;
+        }
+        var resultado = (v1 + v2);
+        showAlert("Você obteve uma média de <strong>" + resultado + " pontos</strong>.");
+    }
+
+    function showAlert(message) {
+        var customAlert = document.getElementById("customAlert");
+        customAlert.innerHTML = message;
+        customAlert.style.display = "block";
+
+        setTimeout(function () {
+            customAlert.style.display = "none";
+        }, 5000); // Oculta o alert após 3 segundos (pode ajustar conforme necessário)
+    }
+    
+    
+
+
+    function calcularMediaProva() {
+    var md1 = parseFloat(document.getElementById("md1_media_prova").value);
+    var md2 = parseFloat(document.getElementById("md2_media_prova").value);
+    var md3 = parseFloat(document.getElementById("md3_media_prova").value);
+
+    if (isNaN(md1) || isNaN(md2) || isNaN(md3)) {
+        showAlert("Digite os valores corretos");
+        return;
+    }
+
+    var resultado_md1 = 60 - md1;
+    var resultado_md2 = resultado_md1 - 2 * md2;
+    var resultado_md3 = resultado_md2 - 3 * md3;
+
+    var md4 = resultado_md3 / 4;
+
+    var resultado = Math.max(0, md4).toFixed(2);
+    showAlert("Você precisará de <strong>" + resultado + " pontos </strong>no 4º Bimestre.");
+
+
+
+
+    function showAlert(message) {
+        var customAlert = document.getElementById("customAlert");
+        customAlert.innerHTML = message;
+        customAlert.style.display = "block";
+
+        setTimeout(function () {
+            customAlert.style.display = "none";
+        }, 5000); // Oculta o alert após 3 segundos (pode ajustar conforme necessário)
+    }}
+
+
+
+
+
+
+    function showAlert(message) {
+        var customAlert = document.getElementById("customAlert");
+        customAlert.innerHTML = message;
+        customAlert.style.display = "block";
+
+        setTimeout(function () {
+            customAlert.style.display = "none";
+        }, 5000); // Oculta o alert após 3 segundos (pode ajustar conforme necessário)
+    }
+
+
+    
+
+
+    function calcularMediaRecuperacao() {
+var mf = parseFloat(document.getElementById("mf").value);
+var customAlert = document.getElementById("customAlert");
+
+if (isNaN(mf)) {
+    showAlert("Digite os valores corretos");
+} else {
+
+
+// Calcular nrp usando a fórmula ajustada
+    var mftotal = 6;
+    var AV = (2.5 * mftotal - mf) / 1.5;
+
+    // Verifica se AV é menor ou igual a 6 e ajusta o resultado
+    var resultado = AV <= 6 ? 0 : AV.toFixed(1);
+    var estilo1 = resultado / 2;
+    var estilo2 = resultado;
+    var mf = mf
+    
+// Exibir o resultado com a cor determinada e status de aprovação
+if (resultado <= 6) {
+        showAlert("Você já está <strong>aprovado</strong>, meus parabéns!");
+    } else {
+        showAlert("Você deve atingir <strong>" + resultado + " pontos</strong> na média final. Se forem <strong>duas avaliações de 0 a 10</strong>, é necessário obter no mínimo <strong>" + estilo2 + " pontos</strong> em cada uma delas. No caso de duas avaliações cuja <strong>soma total é 10 pontos</strong>, é preciso tirar pelo menos <strong>" + estilo1 + " pontos</strong> em cada uma delas.");
+    }
+
+   
+}
+
+function showAlert(message) {
+        var customAlert = document.getElementById("customAlert");
+        customAlert.innerHTML = message;
+        customAlert.style.display = "block";
+
+        setTimeout(function () {
+            customAlert.style.display = "none";
+        }, 10000); // Oculta o alert após 3 segundos (pode ajustar conforme necessário)
+    }}
+
+
+
+    
+
+    function calcularMediaFinal() {
+// Obter valores de entrada
+var md1 = parseFloat(document.getElementById("md1").value);
+var md2 = parseFloat(document.getElementById("md2").value);
+var md3 = parseFloat(document.getElementById("md3").value);
+var md4 = parseFloat(document.getElementById("md4").value);
+
+// Verificar se os valores de entrada são válidos
+if (isNaN(md1) || isNaN(md2) || isNaN(md3) || isNaN(md4)) {
+    showAlert("Números inválidos");
+    return;
+}
+// Calcular total e média
+var total = (md1 + (2 * md2 + (3 * md3 + (4 * md4))));
+var media = total / 10;
+
+// Arredondar a média para duas casas decimais
+var resultado = media.toFixed(2);
+
+// Determinar a cor com base na média calculada
+var cor = (media >= 6) ? 'white' : 'red';
+
+// Exibir o resultado com a cor determinada e status de aprovação
+if (media >= 6) {
+        showAlert("<strong>APROVADO!</strong> Sua média final foi <strong style='color: black" + cor + "'>" + resultado + " pontos</strong>.");
+    } else {
+        showAlert("Sinto muito, você está de recuperação! Sua média final foi <strong style='color: crimson;'>" + resultado + " pontos</strong>.");
+    }
+}
+
+// Função para exibir um alerta
+function showAlert(message) {
+// Implemente o mecanismo de alerta aqui
+// Por exemplo, você pode usar a função alert ou uma caixa de alerta personalizada
+alert(message);
+}
+
+function showAlert(message) {
+        var customAlert = document.getElementById("customAlert");
+        customAlert.innerHTML = message;
+        customAlert.style.display = "block";
+
+        setTimeout(function () {
+            customAlert.style.display = "none";
+        }, 5000); // Oculta o alert após 3 segundos (pode ajustar conforme necessário)
+    }
+
+
+
+
+
+
+
+
+    document.getElementById('toggle-theme').addEventListener('click', function() {
+document.body.classList.toggle('dark-mode');
+
+// Salvar a preferência do usuário (opcional)
+if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+} else {
+    localStorage.setItem('theme', 'light');
+}
+});
+
+// Verificar a preferência do usuário ao carregar a página
+document.addEventListener('DOMContentLoaded', function() {
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+});
+
+    
+
+</script>
+
+</body>
+</html>
